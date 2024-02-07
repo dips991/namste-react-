@@ -4,6 +4,8 @@
   "description": "this is namste-react by akshay saini",
   
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
