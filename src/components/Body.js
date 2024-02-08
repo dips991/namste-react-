@@ -9,7 +9,7 @@ const Body = () => {
   const[filteredRestaurant ,setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
-
+//whenever state variables update , react triggers a reconcilation cycle (re-renders the components)
 console.log("Body Rendered");
 
       useEffect(() => {
@@ -22,7 +22,7 @@ console.log("Body Rendered");
         );
 
         const json =await  data.json();
-
+      //optional chaining 
         setListofRestaurant(
             json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         );
@@ -30,7 +30,7 @@ console.log("Body Rendered");
             json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
             );
       };
-      return listofRestaurants.length===0 ? (
+      return listofRestaurants.length=== 0 ? (
         <Shimmer/>
       ): (
        <div className="body">
