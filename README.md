@@ -19,4 +19,22 @@
 - tree shaking - remove unused code
 - diffrent dev and prod bundles
  
+# Namste Food
 
+/**
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * Body
+ *  - Search
+ *  - RestaurantContainer
+ *   - RestaurantCard
+ *    - img
+ *    - name of res , Ratings
+ * 
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
+ */
