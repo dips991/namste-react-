@@ -6,6 +6,7 @@
 .logo{
     width: 200px;
 }
+
 .nav-items{
     padding: 0px 20px;
 }
@@ -28,7 +29,7 @@
     margin: 5px;
     padding: 5px;
     width: 200px;
-    
+       
 
 }
 
@@ -56,12 +57,15 @@ border: 1px solid black;
 }
 
 .shimmer-card{
-    margin: 20px;
+    margin: 10px;
     width: 200px;
-    height: 400px;
-    background-color: #f0f0f0;
+    height: 300px;
+    background-color: #d5e6d7
 }
 .login{
     padding: 0 20px;
     cursor: pointer;
+}
+.filter{
+    display: flex;
 }
