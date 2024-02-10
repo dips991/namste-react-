@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState , useEffect} from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   
@@ -10,7 +11,7 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 //whenever state variables update , react triggers a reconcilation cycle (re-renders the components)
-console.log("Body Rendered");
+console.log("Body Rendered" );
 
       useEffect(() => {
         fetchData();
@@ -31,7 +32,7 @@ console.log("Body Rendered");
             );
       };
       return listofRestaurants.length=== 0 ? (
-        <Shimmer/>
+        <Shimmer/> 
       ): (
        <div className="body">
            <div className="filter">
@@ -69,7 +70,12 @@ console.log("Body Rendered");
            </div>
            <div className="res-container">
           {filteredRestaurant.map((restaurant) => (
-           <RestaurantCard key={restaurant.info.id} resData ={restaurant}/>       
+          <Link
+          key={restaurant.info.id} 
+          to={"/restaurants/"+restaurant.info.id} 
+          >
+          <RestaurantCard  resData ={restaurant}/> 
+          </Link>      
            ))}
        </div>
        </div>
