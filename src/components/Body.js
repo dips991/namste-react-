@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import { useState , useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -11,13 +11,15 @@ const Body = () => {
   const[filteredRestaurant ,setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+ const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
 //whenever state variables update , react triggers a reconcilation cycle (re-renders the components)
-console.log("Body Rendered" );
+console.log("Body Rendered" ,listofRestaurants);
 
       useEffect(() => {
         fetchData();
       }, []);
-
       const fetchData = async () => {
         const data = await fetch(
           "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.61610&lng=73.72860&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"    
@@ -89,13 +91,19 @@ console.log("Body Rendered" );
           key={restaurant.info.id} 
           to={"/restaurants/"+restaurant.info.id} 
           >
-          <RestaurantCard  resData ={restaurant}/> 
-          </Link>      
+            {restaurant.info.promoted ? (
+               <RestaurantCardPromoted resData ={restaurant}/>
+             ):(
+               <RestaurantCard  resData ={restaurant}/>  
+             )}
+          </Link>       
            ))}
        </div>
        </div>
     );
    }; 
+
+
 
    export default Body;
 
