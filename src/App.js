@@ -1,4 +1,4 @@
-import React , {lazy , Suspense}from "react";
+import React , {lazy , Suspense , useEffect , useState}from "react";
 import  ReactDOM  from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -7,6 +7,10 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter , Outlet, RouterProvider } from "react-router-dom";
+import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 //import Grocery from "./components/Grocery";
 
 //chunking 

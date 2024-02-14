@@ -60,3 +60,12 @@
 # 2 types Routing in Web apps 
 - client side routing
 - server side routing 
+
+ # Redux Toolkit
+  - Install @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to our app
+  - Slice (cartSlice)
+  - dispatch(action)
+  - Selector
+
