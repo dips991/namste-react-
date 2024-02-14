@@ -16,7 +16,7 @@ class UserClass extends React.Component {
     //console.log(this.props.name + "Child Component Did Mount");
     // Api call
 
-    const data = await fetch("https://api.github.com/users/akshaymarch7");
+    const data = await fetch("https://api.github.com/users/dips991");
     const json = await data.json();
 
     this.setState({
@@ -43,7 +43,7 @@ class UserClass extends React.Component {
         <img src={avatar_url} />
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
-        <h4>Contact: @akshaymarch7</h4>
+        <h4>Contact: dipak.deshmukh1911@gmail.com</h4>
       </div>
     );
   }
@@ -67,7 +67,6 @@ export default UserClass;
  *      render(APi data)
  *      <HTML (new API data>)
  *      ccomponentDid Update
- *
  *
  *
  *

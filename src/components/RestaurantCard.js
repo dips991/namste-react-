@@ -1,8 +1,10 @@
 import {useContext} from "react";
 import { CDN_URL } from "../utils/constants";
 import UserContext from "../utils/UserContext";
+
 const RestaurantCard = (props) => {
     const {resData} = props;
+    console.log(resData);
     const { loggedInUser }  = useContext(UserContext); 
    
     const {
@@ -13,9 +15,9 @@ const RestaurantCard = (props) => {
         costForTwo,
         sla,
 
-    } = resData?.info;
+    } = resData;
       return (
-          <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-300 hover:bg-gray-400">
+          <div data-testid="resCard" className="m-4 p-4 w-[250px] rounded-lg bg-gray-300 hover:bg-gray-400">
              < img
              className="rounded-lg"
              alt="res-logo"

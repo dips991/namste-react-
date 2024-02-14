@@ -22,12 +22,30 @@ import Cart from "./components/Cart";
 const Grocery = lazy (()=> import("./components/Grocery"));
 
 const About = lazy (() => import("./components/About"));
+
 const AppLayout = () =>{
+
+    const [userName, setUserName] = useState();
+
+
+//authentication
+useEffect(() => {
+    // Make an API call and send username and password
+    const data = {
+      name: "Dipak Deshmukh",
+    };
+    setUserName(data.name);
+  }, []);
+
     return (
-        <div className="app">
-        <Header/>
-        <Outlet/>
-        </div>
+        <Provider store={appStore}>
+        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+          <div className="app">
+            <Header />
+            <Outlet />
+          </div>
+        </UserContext.Provider>
+      </Provider>
     );
 };
 const appRouter = createBrowserRouter([
@@ -53,10 +71,19 @@ const appRouter = createBrowserRouter([
                 element:<Suspense fallback={<h1>Loading....</h1>}>
                     <Grocery /></Suspense>,
             },
+
             {
                 path:"/restaurants/:resId",
                 element:<RestaurantMenu />,
-            }
+            },
+             {
+                path: "/restaurants/:resId",
+                element: <RestaurantMenu />,
+              },
+              {
+                path: "/cart",
+                element: <Cart />,
+              },
         ],
         errorElement:<Error/>
     },

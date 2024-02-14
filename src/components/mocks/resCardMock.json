@@ -1,0 +1,78 @@
+{
+    "info": {
+      "id": "253596",
+      "name": "Burger King",
+      "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+      "locality": "Tathawade",
+      "areaName": "Tathawade",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Burgers",
+        "American"
+      ],
+      "avgRating": 4.1,
+      "parentId": "166",
+      "avgRatingString": "4.1",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 38,
+        "lastMileTravel": 4.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "35-40 mins",
+        "lastMileTravelString": "4.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-02-15 06:59:00",
+        "opened": true
+      },
+      "badges": {
+        
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {
+            
+          },
+          "textBased": {
+            
+          },
+          "textExtendedBadges": {
+            
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "60% OFF",
+        "subHeader": "UPTO ₹120"
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {
+            
+          },
+          "video": {
+            
+          }
+        }
+      },
+      "reviewsSummary": {
+        
+      },
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {
+        
+      }
+    },
+    "analytics": {
+      
+    },
+    "cta": {
+      "link": "https://www.swiggy.com/restaurants/burger-king-tathawade-pune-253596",
+      "type": "WEBLINK"
+    }
+  }
